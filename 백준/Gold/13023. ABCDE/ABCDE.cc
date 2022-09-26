@@ -37,6 +37,7 @@ int main(){
     
     for(int i = 0; i<m; i++){
         DFS(i,1);
+        if(isPossible)break;
     }
     
     if(isPossible){
