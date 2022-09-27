@@ -52,7 +52,8 @@ int check(){
 }
 
 int main(){
-    
+    ios::sync_with_stdio(false);
+    cin.tie(0);
     int ans = 0;
     cin >> n >> m;
     
@@ -96,9 +97,10 @@ int main(){
         ans = max(ans, tmp);
     }
     for(int i = 0; i<len-1; i++){
-        for(int j = i+1; j<len; j++){
+        for(int j = i; j<len; j++){
             auto one = space[i];
             auto two = space[j];
+            if(one == two)continue;
             arr[one.first][one.second] = 1;
             arr[two.first][two.second] = 1;
             //cout << one.first << one.second << " " << two.first << two.second << '\n';
